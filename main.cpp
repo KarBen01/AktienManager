@@ -20,7 +20,7 @@ void loadCSV() {
 
 }
 
-int MenuInput(char InputValue) {
+char MenuInput(char InputValue) {
 
     cout << "1 - ADD    2 - DEL    3 - IMPORT    4 - SEARCH" << endl;
     cout << "5 - PLOT    6 - SAVE    7 - LOAD    8 - QUIT" << endl << ": ";
@@ -68,8 +68,8 @@ int MenuInput(char InputValue) {
 
 int main() {
     cout << "Hello, World!" << std::endl;
-    int ReturnValue = 0;
-    while(ReturnValue != 1) {
+    char ReturnValue = '0';
+    while(ReturnValue != '1') {
         ReturnValue = MenuInput(ReturnValue);
     }
     return 0;

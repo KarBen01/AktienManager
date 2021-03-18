@@ -1,4 +1,4 @@
-# Install script for directory: J:/FH/SS2021/ALGOS/Hashtabelle
+# Install script for directory: C:/Users/Benni/Desktop/FHTW/SS2021/ALGOS/AktienManager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "J:/FH/SS2021/ALGOS/Hashtabelle/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Benni/Desktop/FHTW/SS2021/ALGOS/AktienManager/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

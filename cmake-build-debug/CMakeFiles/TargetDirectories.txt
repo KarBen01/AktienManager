@@ -1,3 +1,3 @@
-J:/FH/SS2021/ALGOS/Hashtabelle/cmake-build-debug/CMakeFiles/Hashtabelle.dir
-J:/FH/SS2021/ALGOS/Hashtabelle/cmake-build-debug/CMakeFiles/edit_cache.dir
-J:/FH/SS2021/ALGOS/Hashtabelle/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Benni/Desktop/FHTW/SS2021/ALGOS/AktienManager/cmake-build-debug/CMakeFiles/Hashtabelle.dir
+C:/Users/Benni/Desktop/FHTW/SS2021/ALGOS/AktienManager/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Benni/Desktop/FHTW/SS2021/ALGOS/AktienManager/cmake-build-debug/CMakeFiles/rebuild_cache.dir

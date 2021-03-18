@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "J:/FH/SS2021/ALGOS/Hashtabelle/main.cpp" "J:/FH/SS2021/ALGOS/Hashtabelle/cmake-build-debug/CMakeFiles/Hashtabelle.dir/main.cpp.obj"
+  "C:/Users/Benni/Desktop/FHTW/SS2021/ALGOS/AktienManager/main.cpp" "C:/Users/Benni/Desktop/FHTW/SS2021/ALGOS/AktienManager/cmake-build-debug/CMakeFiles/Hashtabelle.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

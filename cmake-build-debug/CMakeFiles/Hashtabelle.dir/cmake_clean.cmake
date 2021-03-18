@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Hashtabelle.dir/main.cpp.obj"
   "Hashtabelle.exe"
   "Hashtabelle.exe.manifest"
+  "Hashtabelle.lib"
   "Hashtabelle.pdb"
-  "libHashtabelle.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,18 +1,18 @@
-"D:\My Programs\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" J:\FH\SS2021\ALGOS\Hashtabelle
--- The C compiler identification is GNU 8.1.0
--- The CXX compiler identification is GNU 8.1.0
--- Check for working C compiler: D:/My Programs/CodeBlocks/MinGW/bin/gcc.exe
--- Check for working C compiler: D:/My Programs/CodeBlocks/MinGW/bin/gcc.exe - works
+C:\Users\Benni\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7148.70\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" C:\Users\Benni\Desktop\FHTW\SS2021\ALGOS\AktienManager
+-- The C compiler identification is MSVC 19.27.29111.0
+-- The CXX compiler identification is MSVC 19.27.29111.0
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.27.29110/bin/Hostx86/x86/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.27.29110/bin/Hostx86/x86/cl.exe - works
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Check for working CXX compiler: D:/My Programs/CodeBlocks/MinGW/bin/g++.exe
--- Check for working CXX compiler: D:/My Programs/CodeBlocks/MinGW/bin/g++.exe - works
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.27.29110/bin/Hostx86/x86/cl.exe
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.27.29110/bin/Hostx86/x86/cl.exe - works
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: J:/FH/SS2021/ALGOS/Hashtabelle/cmake-build-debug
+-- Build files have been written to: C:/Users/Benni/Desktop/FHTW/SS2021/ALGOS/AktienManager/cmake-build-debug
