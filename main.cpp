@@ -57,13 +57,13 @@ char MenuInput(char InputValue) {
         }
         case '8': {
             //QUIT
-            return 1;
+            return '1';
         }
         default: {
             cout << "Please choose a valid function" << endl;
         }
     }
-    return 0;
+    return '0';
 }
 
 int main() {
