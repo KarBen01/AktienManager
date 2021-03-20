@@ -17,6 +17,16 @@ void create()
     //import function comes here
 }
 
+void write_record() {
+
+    std::ofstream myfile;
+    myfile.open ("example.csv");
+    myfile << "Spalte A; Spalte B; Spalte C\n";
+    myfile << "a;b;c\n";
+    myfile << "1,25;3.456;45";
+    myfile.close();
+}
+
 void read_record()
 {
     fstream file;  // file stream
@@ -93,7 +103,7 @@ char MenuInput(char InputValue) {
         }
         case '6': {
             //SAVE
-            create();
+            write_record();
             break;
         }
         case '7': {
