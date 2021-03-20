@@ -6,13 +6,47 @@
 using namespace std;
 
 struct Stock {
+    string name, WKN, shorty;
+};
+
+struct StockData {
     string open, high, low, close ,adjclose, volume, date;
 };
 
+void add_record() {
+
+    Stock newStock;
+
+    do {
+        cout << "Stock-Name: ";
+        cin >> newStock.name;
+    } while(newStock.name.length() == 0);
+
+    do {
+        cout << "Stock-WKN: ";
+        cin >> newStock.WKN;
+    } while(newStock.WKN.length() == 0);
+
+    do {
+        cout << "Stock-Abbreviation: ";
+        cin >> newStock.shorty;
+    } while(newStock.shorty.length() == 0);
+
+    //hashing(newStock.name);
+    //hashing(newStock.shorty);
+}
+
 void write_record() {
 
+    string filename;
+
+    do {
+        cout << "Please enter a filename: ";
+        cin >> filename;
+    } while (filename.length() == 0);
+
     ofstream file;
-    file.open ("example.csv");
+    file.open (filename + ".csv");
     file << "Spalte A; Spalte B; Spalte C\n";
     file << "a;b;c\n";
     file << "1,25;3.456;45";
@@ -29,7 +63,7 @@ void read_record() {
     // if file is open then display the contents
     if (file) {
 
-        Stock currStock; // one data record
+        StockData currStock; // one data record
         string input; //holds input of file as string
 
         //display report header
