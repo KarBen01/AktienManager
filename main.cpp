@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <string>
 
+
 using namespace std;
 
 struct Stock {
@@ -13,7 +14,25 @@ struct StockData {
     string open, high, low, close ,adjclose, volume, date;
 };
 
+unsigned long long hashing(string &tohash){
+    int length = tohash.length();
+    unsigned long long hashvalue = 0;
+    for(int i = 0; i < length; i++){
+        hashvalue += tohash[i] * pow(31, (length -1 - i));
+    }
+    cout << hashvalue << endl;
+    return hashvalue;
+}
+
 void add_record() {
+
+    //zum testen ob der hashvalue stimmt
+    string testvalue;
+    cout << endl << ":";
+    cin >> testvalue;
+    hashing(testvalue);
+
+    /*
 
     Stock newStock;
 
@@ -33,7 +52,7 @@ void add_record() {
     } while(newStock.shorty.length() == 0);
 
     //hashing(newStock.name);
-    //hashing(newStock.shorty);
+    //hashing(newStock.shorty);*/
 }
 
 void write_record() {
@@ -105,6 +124,7 @@ char MenuInput(char InputValue) {
 
     switch (InputValue) {
         case '1': {
+            add_record();
             //ADD
             break;
         }
