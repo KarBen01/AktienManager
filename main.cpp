@@ -5,72 +5,60 @@
 
 using namespace std;
 
-struct Stock
-{
-    string open, high, low, close ,adjclose, volume;
-    string date;
-
+struct Stock {
+    string open, high, low, close ,adjclose, volume, date;
 };
-
-void create()
-{
-    //import function comes here
-}
 
 void write_record() {
 
-    std::ofstream myfile;
-    myfile.open ("example.csv");
-    myfile << "Spalte A; Spalte B; Spalte C\n";
-    myfile << "a;b;c\n";
-    myfile << "1,25;3.456;45";
-    myfile.close();
+    ofstream file;
+    file.open ("example.csv");
+    file << "Spalte A; Spalte B; Spalte C\n";
+    file << "a;b;c\n";
+    file << "1,25;3.456;45";
+    file.close();
 }
 
-void read_record()
-{
+void read_record() {
+
     fstream file;  // file stream
 
     // open a CSV file for input
     file.open("MSFT.csv", ios::in);
 
     // if file is open then display the contents
-    if (file)
-    {
+    if (file) {
 
         Stock currStock; // one data record
-        std::string input; //holds input of file as string
-
+        string input; //holds input of file as string
 
         //display report header
-        std::cout << endl << std::left << std::setw(12) << "Date"
-                << std::left << std::setw(12) << "OPEN"
-                << std::left << std::setw(12) << "HIGH"
-                << std::left << std::setw(12) << "LOW"
-                << std::left << std::setw(12) << "CLOSE"
-                << std::left << std::setw(12) << "ADJ CLOSE"
-                << std::left << std::setw(12) << "VOLUME"
-                << std::endl;
+        cout << endl << left << setw(12) << "Date"
+                << left << setw(12) << "OPEN"
+                << left << setw(12) << "HIGH"
+                << left << setw(12) << "LOW"
+                << left << setw(12) << "CLOSE"
+                << left << setw(12) << "ADJ CLOSE"
+                << left << setw(12) << "VOLUME"
+                << endl;
 
 
         //until reach end-of-file, read and display each record
-        while (std::getline(file, input))
-        {
+        while (getline(file, input)) {
 
-            std::getline(file, currStock.date, ',');
-            std::getline(file, currStock.open, ',');
-            std::getline(file, currStock.high, ',');
-            std::getline(file, currStock.low, ',');
-            std::getline(file, currStock.close, ',');
-            std::getline(file, currStock.adjclose, ',');
-            std::getline(file, currStock.volume);
+            getline(file, currStock.date, ',');
+            getline(file, currStock.open, ',');
+            getline(file, currStock.high, ',');
+            getline(file, currStock.low, ',');
+            getline(file, currStock.close, ',');
+            getline(file, currStock.adjclose, ',');
+            getline(file, currStock.volume);
 
             cout << currStock.date << "  " << currStock.open << "  " << currStock.high << "  " << currStock.low << "  " << currStock.close << "  " << currStock.adjclose << "  " << currStock.volume << endl;
-
         }
     }
-    else // could not open the file, tell the user
-    {
+    else {
+        // could not open the file, tell the user
         cout << "Error opening file.\n";
     }
 }
@@ -80,6 +68,7 @@ char MenuInput(char InputValue) {
     cout << "1 - ADD    2 - DEL    3 - IMPORT    4 - SEARCH" << endl;
     cout << "5 - PLOT    6 - SAVE    7 - LOAD    8 - QUIT" << endl << ": ";
     cin >> InputValue;
+
     switch (InputValue) {
         case '1': {
             //ADD
@@ -128,5 +117,6 @@ int main() {
     while(ReturnValue != '1') {
         ReturnValue = MenuInput(ReturnValue);
     }
+
     return 0;
 }
