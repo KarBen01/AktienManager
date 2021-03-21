@@ -35,6 +35,15 @@ int getIndex(string &tohash) {
     return index;
 }
 
+unsigned long long getHashValue(string &tohash){
+    int length = tohash.length();
+    unsigned long long hashvalue = 0;
+    for (int i = 0; i < length; i++) {
+        hashvalue += tohash[i] * pow(31, (length - 1 - i));
+    }
+    return hashvalue;
+}
+
 void add_record() {
 
     /*zum testen ob der hashvalue stimmt
@@ -130,14 +139,17 @@ void searchStock() {
     string name;
     int shortyindex;
     int nameindex;
+    unsigned long long namehashvalue;
+    unsigned long long shortyhashvalue;
     int index_add = 0;
     switch (NameORShort()) {
         case '1': {
             cout << "Enter the Name: ";
             cin >> name;
             nameindex = getIndex(name);
+            namehashvalue = getHashValue(name);
             if (hashtableName[nameindex] != nullptr) {
-                if (getIndex(hashtableName[nameindex]->name) == nameindex) {
+                if (getHashValue(hashtableName[nameindex]->name) == namehashvalue) {
                     cout << endl << "---------------------------------------" << endl
                     << "Stock-Name: " << hashtableName[nameindex]->name << endl
                     << "Stock-WKN: " << hashtableName[nameindex]->WKN << endl
@@ -157,8 +169,9 @@ void searchStock() {
             cout << "Enter the Ticker: ";
             cin >> shorty;
             shortyindex = getIndex(shorty);
+            shortyhashvalue = getHashValue(shorty);
             if (hashtableShorty[shortyindex] != nullptr) {
-                if (getIndex(hashtableShorty[shortyindex]->shorty) == shortyindex) {
+                if (getHashValue(hashtableShorty[shortyindex]->shorty) == shortyhashvalue) {
                     cout << endl << "---------------------------------------" << endl
                          << "Stock-Name: " << hashtableShorty[shortyindex]->name << endl
                          << "Stock-WKN: " << hashtableShorty[shortyindex]->WKN << endl
